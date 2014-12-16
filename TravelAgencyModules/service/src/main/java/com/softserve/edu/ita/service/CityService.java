@@ -2,8 +2,8 @@ package com.softserve.edu.ita.service;
 
 import java.util.List;
 
-import com.softserve.edu.ita.service.dao.DaoFactory;
-import com.softserve.edu.ita.service.entity.City;
+import com.softserve.edu.ita.dao.DaoFactory;
+import com.softserve.edu.ita.entity.City;
 
 public class CityService {
 	public void addCity(City city) {

@@ -2,8 +2,8 @@ package com.softserve.edu.ita.service;
 
 import java.util.List;
 
-import com.softserve.edu.ita.service.dao.DaoFactory;
-import com.softserve.edu.ita.service.entity.Country;
+import com.softserve.edu.ita.dao.DaoFactory;
+import com.softserve.edu.ita.entity.Country;
 
 public class CountryService {
 	public void addCountry(Country country) {

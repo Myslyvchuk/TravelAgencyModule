@@ -1,8 +1,8 @@
 package com.softserve.edu.ita.service;
 
 
-import com.softserve.edu.ita.service.dao.DaoFactory;
-import com.softserve.edu.ita.service.entity.Client;
+import com.softserve.edu.ita.dao.DaoFactory;
+import com.softserve.edu.ita.entity.Client;
 
 import java.util.List;
 

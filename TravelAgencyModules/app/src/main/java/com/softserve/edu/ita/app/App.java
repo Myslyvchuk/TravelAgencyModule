@@ -1,8 +1,8 @@
 package com.softserve.edu.ita.app;
 
-import com.softserve.edu.ita.app.dao.HibernateUtil;
-import com.softserve.edu.ita.app.entity.*;
-import com.softserve.edu.ita.app.service.*;
+import com.softserve.edu.ita.dao.HibernateUtil;
+import com.softserve.edu.ita.entity.*;
+import com.softserve.edu.ita.service.*;
 
 public class App {
 

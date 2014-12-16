@@ -1,0 +1,6 @@
+com\softserve\edu\ita\entity\City.class
+com\softserve\edu\ita\entity\Client.class
+com\softserve\edu\ita\entity\Country.class
+com\softserve\edu\ita\entity\Hotel.class
+com\softserve\edu\ita\entity\Visa.class
+com\softserve\edu\ita\entity\Booking.class
