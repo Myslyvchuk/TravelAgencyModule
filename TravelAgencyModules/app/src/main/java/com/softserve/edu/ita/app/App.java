@@ -1,5 +1,7 @@
 package com.softserve.edu.ita.app;
 
+import java.sql.Date;
+
 import com.softserve.edu.ita.dao.HibernateUtil;
 import com.softserve.edu.ita.entity.*;
 import com.softserve.edu.ita.service.*;
@@ -29,17 +31,13 @@ public class App {
 
 		booking1.setHotel(hotel1);
 		booking1.setClient(client1);
-		booking1.setDateFrom(new java.sql.Date((long) (new java.util.Date())
-				.getTime() + 60 * 60 * 24 * 1000 * 4));
-		booking1.setDateFrom(new java.sql.Date((long) (new java.util.Date())
-				.getTime() + 60 * 60 * 24 * 1000 * 4));
+		booking1.setDateFrom(Date.valueOf("2014-11-13"));
+		booking1.setDateTo(Date.valueOf("2014-11-14"));
 
 		visa1.setClient(client1);
 		visa1.setCountry(country1);
-		visa1.setDateFrom(new java.sql.Date((long) (new java.util.Date())
-				.getTime() + 60 * 60 * 24 * 1000 * 4));
-		visa1.setDateFrom(new java.sql.Date((long) (new java.util.Date())
-				.getTime() + 60 * 60 * 24 * 1000 * 4));
+		visa1.setDateFrom(Date.valueOf("2014-11-13"));
+		visa1.setDateFrom(Date.valueOf("2014-11-13"));
 
 		CityService cis = new CityService();
 		ClientService cls = new ClientService();

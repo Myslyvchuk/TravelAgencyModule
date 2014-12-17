@@ -1,6 +1,6 @@
 package com.softserve.edu.ita.entity;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,8 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
 
 @Entity
 @Table(name = "booking")
@@ -26,11 +25,9 @@ public class Booking {
 	private Client client;
 	
 	@Column(name = "date_from")
-	@Temporal(value = TemporalType.DATE)
 	private Date dateFrom;
 	
 	@Column(name = "date_to")
-	@Temporal(value = TemporalType.DATE)
 	private Date dateTo;
 
 	public Booking() {

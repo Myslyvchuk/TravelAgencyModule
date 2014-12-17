@@ -1,6 +1,6 @@
 package com.softserve.edu.ita.entity;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.*;
 
@@ -19,11 +19,9 @@ public class Visa {
 	private Country country;
 	
 	@Column(name = "date_from")
-	@Temporal(value = TemporalType.DATE)
 	private Date dateFrom;
 	
 	@Column(name = "date_to")
-	@Temporal(value = TemporalType.DATE)
 	private Date dateTo;
 
 	public Visa() {
