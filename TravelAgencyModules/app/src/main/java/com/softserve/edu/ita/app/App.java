@@ -18,27 +18,27 @@ public class App {
 		country1.setCountry("Guatemala");
 
 		city1.setCity("Guantanamo");
-		city1.setCountryID(country1);
+		city1.setCountry(country1);
 
 		client1.setName("Test");
-		client1.setSurname("Test");
+		client1.setLastname("Test");
 		client1.setAge(100);
 
 		hotel1.setName("Gavana");
-		hotel1.setCityID(city1);
+		hotel1.setCity(city1);
 
-		booking1.setHotelID(hotel1);
-		booking1.setClientID(client1);
-		booking1.setDate_from(new java.sql.Date((long) (new java.util.Date())
+		booking1.setHotel(hotel1);
+		booking1.setClient(client1);
+		booking1.setDateFrom(new java.sql.Date((long) (new java.util.Date())
 				.getTime() + 60 * 60 * 24 * 1000 * 4));
-		booking1.setDate_to(new java.sql.Date((long) (new java.util.Date())
+		booking1.setDateFrom(new java.sql.Date((long) (new java.util.Date())
 				.getTime() + 60 * 60 * 24 * 1000 * 4));
 
-		visa1.setClientID(client1);
-		visa1.setCountryID(country1);
-		visa1.setDate_from(new java.sql.Date((long) (new java.util.Date())
+		visa1.setClient(client1);
+		visa1.setCountry(country1);
+		visa1.setDateFrom(new java.sql.Date((long) (new java.util.Date())
 				.getTime() + 60 * 60 * 24 * 1000 * 4));
-		visa1.setDate_to(new java.sql.Date((long) (new java.util.Date())
+		visa1.setDateFrom(new java.sql.Date((long) (new java.util.Date())
 				.getTime() + 60 * 60 * 24 * 1000 * 4));
 
 		CityService cis = new CityService();

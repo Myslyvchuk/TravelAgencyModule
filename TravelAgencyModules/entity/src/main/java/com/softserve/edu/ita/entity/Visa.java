@@ -11,16 +11,20 @@ public class Visa {
 	@GeneratedValue
 	@Column(name = "id")
 	private int id;
+	
 	@ManyToOne
-	private Client clientID;
+	private Client client;
+	
 	@ManyToOne
-	private Country countryID;
+	private Country country;
+	
 	@Column(name = "date_from")
 	@Temporal(value = TemporalType.DATE)
-	private Date date_from;
+	private Date dateFrom;
+	
 	@Column(name = "date_to")
 	@Temporal(value = TemporalType.DATE)
-	private Date date_to;
+	private Date dateTo;
 
 	public Visa() {
 	}
@@ -33,36 +37,84 @@ public class Visa {
 		this.id = id;
 	}
 
-	public Date getDate_from() {
-		return date_from;
+	public Client getClient() {
+		return client;
 	}
 
-	public void setDate_from(Date date_from) {
-		this.date_from = date_from;
+	public void setClient(Client client) {
+		this.client = client;
 	}
 
-	public Date getDate_to() {
-		return date_to;
+	public Country getCountry() {
+		return country;
 	}
 
-	public void setDate_to(Date date_to) {
-		this.date_to = date_to;
+	public void setCountry(Country country) {
+		this.country = country;
 	}
 
-	public Client getClientID() {
-		return clientID;
+	public Date getDateFrom() {
+		return dateFrom;
 	}
 
-	public void setClientID(Client clientID) {
-		this.clientID = clientID;
+	public void setDateFrom(Date dateFrom) {
+		this.dateFrom = dateFrom;
 	}
 
-	public Country getCountryID() {
-		return countryID;
+	public Date getDateTo() {
+		return dateTo;
 	}
 
-	public void setCountryID(Country countryID) {
-		this.countryID = countryID;
+	public void setDateTo(Date dateTo) {
+		this.dateTo = dateTo;
 	}
 
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((client == null) ? 0 : client.hashCode());
+		result = prime * result + ((country == null) ? 0 : country.hashCode());
+		result = prime * result
+				+ ((dateFrom == null) ? 0 : dateFrom.hashCode());
+		result = prime * result + ((dateTo == null) ? 0 : dateTo.hashCode());
+		result = prime * result + id;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Visa other = (Visa) obj;
+		if (client == null) {
+			if (other.client != null)
+				return false;
+		} else if (!client.equals(other.client))
+			return false;
+		if (country == null) {
+			if (other.country != null)
+				return false;
+		} else if (!country.equals(other.country))
+			return false;
+		if (dateFrom == null) {
+			if (other.dateFrom != null)
+				return false;
+		} else if (!dateFrom.equals(other.dateFrom))
+			return false;
+		if (dateTo == null) {
+			if (other.dateTo != null)
+				return false;
+		} else if (!dateTo.equals(other.dateTo))
+			return false;
+		if (id != other.id)
+			return false;
+		return true;
+	}
+
+	
 }
