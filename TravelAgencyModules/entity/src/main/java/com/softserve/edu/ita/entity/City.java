@@ -13,7 +13,7 @@ public class City {
 	@GeneratedValue
 	private int id;
 	
-	@Column(name = "surname", length = 32)
+	@Column(name = "city", length = 32)
 	private String city;
 	
 	@ManyToOne
