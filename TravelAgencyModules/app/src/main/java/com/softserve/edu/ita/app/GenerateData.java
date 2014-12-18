@@ -68,14 +68,14 @@ public class GenerateData {
 			hs.addHotel(hotelList.get(i));
 
 		}
-
+		Random r = new Random(44);
 		for (int i = 0; i < 50; i++) {
 
 			Client client1 = new Client();
 			Booking booking1 = new Booking();
 			Visa visa1 = new Visa();
 
-			Random r = new Random();
+		
 			int year = r.nextInt(2017 - 2013) + 113;
 			int month = r.nextInt(13 - 1) + 1;
 			int dayOfYear = r.nextInt(31 - 1) + 1;
