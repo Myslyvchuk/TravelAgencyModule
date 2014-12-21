@@ -69,7 +69,7 @@ public class GenerateData {
 
 		}
 		Random r = new Random(44);
-		for (int i = 0; i < 50; i++) {
+		for (int i = 0; i < 1; i++) {
 
 			Client client1 = new Client();
 			Booking booking1 = new Booking();
