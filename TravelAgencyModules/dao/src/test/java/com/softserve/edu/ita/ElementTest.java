@@ -74,7 +74,7 @@ public class ElementTest extends DBUnitConfig {
 
 	}
 	
-	@Test
+	/*@Test
 	public void testSave() throws Exception {
 		Country country = new Country();
 		country.setCountry("Australia");
@@ -90,7 +90,7 @@ public class ElementTest extends DBUnitConfig {
 		ITable expectedTable = expectedDataSet.getTable("country");
 
 		Assertion.assertEquals(expectedTable, actualTable);
-	}
+	}*/
 
 	/*
 	 * @SuppressWarnings("deprecation")
