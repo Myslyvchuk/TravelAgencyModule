@@ -1,7 +1,7 @@
 package com.softserve.edu.ita.service;
 
 
-import com.softserve.edu.ita.dao.DaoFactory;
+import com.softserve.edu.ita.dao.implementation.DaoFactory;
 import com.softserve.edu.ita.entity.Client;
 
 import java.util.List;
@@ -14,11 +14,11 @@ public class ClientService {
 		DaoFactory.getInstance().getClientDao().updateElement(client);
 	}
 	public Client getClientById(Long clientId) {
-        return DaoFactory.getInstance().getClientDao().getElementByID(clientId);
+        return DaoFactory.getInstance().getClientDao().getElementById(clientId);
     }
 
     public List<Client> getAllClient() {
-        return DaoFactory.getInstance().getClientDao().getAllElements();
+        return DaoFactory.getInstance().getClientDao().getAllElement();
     }
 
     public void deleteClient(Client client) {

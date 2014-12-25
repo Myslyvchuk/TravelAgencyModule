@@ -6,8 +6,6 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 
-import junit.framework.Assert;
-
 import org.dbunit.Assertion;
 import org.dbunit.JdbcDatabaseTester;
 import org.dbunit.dataset.IDataSet;
@@ -16,7 +14,7 @@ import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.softserve.edu.ita.dao.DaoFactory;
+import com.softserve.edu.ita.dao.implementation.DaoFactory;
 import com.softserve.edu.ita.entity.Country;
 
 import config.DBUnitConfig;
@@ -28,7 +26,7 @@ public class ElementTest extends DBUnitConfig {
 		}
 
 		public List<Country> getAllCountry() {
-			return DaoFactory.getInstance().getCountryDao().getAllElements();
+			return DaoFactory.getInstance().getCountryDao().getAllElement();
 		}
 
 	}

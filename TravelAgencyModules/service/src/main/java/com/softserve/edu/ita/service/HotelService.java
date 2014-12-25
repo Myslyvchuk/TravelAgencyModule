@@ -2,7 +2,7 @@ package com.softserve.edu.ita.service;
 
 import java.util.List;
 
-import com.softserve.edu.ita.dao.DaoFactory;
+import com.softserve.edu.ita.dao.implementation.DaoFactory;
 import com.softserve.edu.ita.entity.Hotel;
 
 public class HotelService {
@@ -14,11 +14,11 @@ public class HotelService {
 		DaoFactory.getInstance().getHotelDao().updateElement(hotel);
 	}
 	public Hotel getHotelById(Long hotelId) {
-        return DaoFactory.getInstance().getHotelDao().getElementByID(hotelId);
+        return DaoFactory.getInstance().getHotelDao().getElementById(hotelId);
     }
 
     public List<Hotel> getAllHotel() {
-        return DaoFactory.getInstance().getHotelDao().getAllElements();
+        return DaoFactory.getInstance().getHotelDao().getAllElement();
     }
 
     public void deleteHotel(Hotel hotel) {
